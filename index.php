@@ -2,10 +2,14 @@
 
 class Movie {
 
+ public $name;
+
+
 }
 
 $Avengers = new Movie();
-$Thor = new Movie();
+
+$Avengers->name = "Avengers";
 
 
 var_dump($Avengers);
