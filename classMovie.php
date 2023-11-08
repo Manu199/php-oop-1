@@ -46,6 +46,16 @@ class Movie {
     {
         return $this->genre;
     }
+
+    public function addActor($actorName) {
+        $this->cast [] = $actorName;
+    }
+    public function removeActor($actorName) {
+        $indexToDelete = array_search($actorName, $this->cast);
+        if ($indexToDelete) {
+            array_splice($this->cast, $indexToDelete, 1);
+        }
+    }    
 }
 
 

@@ -1,6 +1,25 @@
 <?php 
 require_once __DIR__ . '/classMovie.php';
 require_once  __DIR__ . '/db.php';
+
+// $Schindlers_List = new Movie(
+//     "Schindler's List",
+//         "In Nazi-occupied Poland during World War II, Oskar Schindler becomes a factory owner who saves the lives of over a thousand Polish-Jewish refugees.",
+//         "https://m.media-amazon.com/images/I/817sLmprCSL._AC_UF1000,1000_QL80_.jpg",
+//         ["Liam Neeson", "Ralph Fiennes"],
+//         ["Drama", "History"]
+// );
+
+// $Schindlers_List->addActor("Liam Neeson");
+
+// $Schindlers_List->addActor("Ralph Fiennes");
+
+// $Schindlers_List->removeActor("Ralph Fiennes");
+
+// var_dump($Schindlers_List);
+
+// die;
+
 ?>
 
 
@@ -40,7 +59,7 @@ require_once  __DIR__ . '/db.php';
                             <h1 class="text-center text-danger"><?= $movie->getTitle()?></h1>
                             <small class="fw-bold fs-5">Descrizione:</small>
                             <p><?= $movie->getDescription() ?></p>
-                            <img src="<?= $movie->getImg_url() ?>" alt="immagine" class="img-fluid">
+                            <div class="img"><img src="<?= $movie->getImg_url() ?>" alt="immagine" class="img-fluid"></div>
                             <span class="fw-bold fs-5">Cast: </span>
                             <ul class="list-unstyled">
                                 <?php foreach ($movie->getCast() as $actor) :?>
