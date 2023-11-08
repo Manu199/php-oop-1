@@ -1,5 +1,7 @@
 <?php 
 require_once __DIR__ . '/classMovie.php';
+require_once  __DIR__ . '/Movie.php';
+require_once  __DIR__ . '/TvSeries.php';
 require_once  __DIR__ . '/db.php';
 
 // $Schindlers_List = new Movie(
